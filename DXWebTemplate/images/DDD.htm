@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html >
+
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>ข้อสอบออนไลน์</title>
+
+		<!-- Sets initial viewport load and disables zooming	-->
+        
+		<meta name="viewport" content="initial-scale=1">
+
+		<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Set Apple icons for when prototype is saved to home screen -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="touch-icons/apple-touch-icon-57x57.png">
+
+		<!-- Include the base Snap.js CSS -->
+		<link rel="stylesheet" href="css/snap.css">
+
+		<!-- Include the compiled Ratchet CSS -->
+		<link rel="stylesheet" href="css/ratchet.css">
+
+
+
+		<!-- Include the compiled Ratchet JS -->
+		<script type="text/javascript" id="twitter-wjs" src="Scripts/widgets.js"></script>
+        <script type="text/javascript" src="Scripts/ratchet.js"></script>
+
+		<!-- Intro paragraph styles. Delete once you start using this page -->
+		<style type="text/css">
+			.snap-drawers .list{margin: 0;}
+
+			.welcome {
+				line-height: 1.5;
+				color: #555;
+			}
+			h2{
+				padding: 15px;
+				font-weight: normal;
+				font-size: 36px;
+			}
+			.uli {
+                background-color:#f8f8f8; 
+                background-image:-webkit-linear-gradient(top, #f8f8f8 0, #eee 100%);
+            }
+            .my-picture 
+            {
+                width:100px;
+                height:110px;
+                margin-left:auto; margin-right:auto;
+            }
+		</style>
+         <script type="text/javascript">
+             function CallLogout() {
+                 if (confirm('คุณต้องการออกจากระบบ ?') == true) {
+                     window.open('logout.aspx', '_parent');
+                 } else {
+                     return false;
+                 }
+
+             }
+             function RedirectForTeacher(urlLink) {
+                 window.open(urlLink, '_parent');
+             }
+             function RedirectTestOnline(examID, subjid) {
+                 window.open('testonline.aspx?examID=' + examID + '&subjid=' + subjid, '_parent');
+             }
+             
+    </script>
+	</head>
+	<body data-twttr-rendered="true" onbeforeunload="bodyUnload();" onmousedown="somefunction()">
+	
+	<div class="snap-drawers" style="background-color:#E0E0E0;">
+		<div class="snap-drawer snap-drawer-left" id="left-drawer">
+			<iframe src="main-menu.aspx" allowtransparency="true" frameborder="0" scrolling="no"  WIDTH="248" HEIGHT="800"></iframe>
+		</div>
+		<div class="snap-drawer snap-drawer-right" id="right-drawer">
+			
+		</div>
+	</div>
+	<div id="content" class="snap-content">
+	
+		<!-- Make sure all your bars are the first things in your <body> -->
+		<header class="bar-title">
+			<button class="button" id="toggle-left">เมนู</button>
+        
+                <h1 class="title">
+                 <div style="margin-top:2px; margin-left:-150px;" >
+                    <script id="dxis_303115095" src="/testonline/DXR.axd?r=1_42-uiIP8" type="text/javascript"></script><script id="dxis_280701816" src="/testonline/DXR.axd?r=1_74-uiIP8" type="text/javascript"></script><script id="dxis_296757909" src="/testonline/DXR.axd?r=1_63-uiIP8" type="text/javascript"></script><script id="dxis_300821368" src="/testonline/DXR.axd?r=1_71-uiIP8" type="text/javascript"></script><script id="dxis_1637993912" src="/testonline/DXR.axd?r=2_22-tiIP8" type="text/javascript"></script><script id="dxis_1669057976" src="/testonline/DXR.axd?r=2_28-tiIP8" type="text/javascript"></script><script id="dxss_790634972" type="text/javascript">
+<!--
+var showTrialMsg = function(){
+  var trialNode = document.createElement('DIV');
+  document.body.insertBefore(trialNode, document.body.childNodes[0]);
+  trialNode.innerHTML = 'You have installed DevExpress Products in Evaluation Mode – To purchase a license, please visit us online at: <a href="http://www.devexpress.com/purchase">www.devexpress.com/purchase</a>.<br>';
+  trialNode.innerHTML += 'If you’ve purchased DevExpress Products and need to register your license, please review: <a href="http://devexpress.com/Support/Center/KB/p/K18106.aspx">How to Convert a Trial and Register Your Product</a>.';
+  trialNode.style.cssText = "padding:2px;position:absolute;left:1px;top:1px;z-index:100000;font-family:sans-serif;font-size:8pt;color:black;background-color:white;";
+};
+if(window.addEventListener)
+    window.addEventListener("load", showTrialMsg, true);
+else
+    window.attachEvent("onload", showTrialMsg);
+
+//-->
+</script><link rel="stylesheet" type="text/css" href="/testonline/DXR.axd?r=1_3-uiIP8" /><link rel="stylesheet" type="text/css" href="/testonline/DXR.axd?r=1_4-uiIP8" /><link rel="stylesheet" type="text/css" href="/testonline/DXR.axd?r=1_2-uiIP8" /><link rel="stylesheet" type="text/css" href="/testonline/DXR.axd?r=2_2-tiIP8" /><link rel="stylesheet" type="text/css" href="/testonline/DXR.axd?r=2_0-tiIP8" /><img id="MyImage" src="pictures/13153.jpg" alt="" style="height:40px;width:40px;" /> 
+                 </div>
+                  <div style="margin-left:20px; margin-top:-55px; ">
+                      <span id="lbName" style="color:White;font-size:Small;"> คุณนุกูล  แดงสมภาพภูมิ</span>
+                 </div>
+                </h1>
+            
+			<button class="button" id="toggle-right" style="display:none;">กระดาษคำตอบ</button>
+		</header>
+	
+        
+
+		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+		<div class="content">
+			    
+    <form method="post" action="Exam2Word.aspx" id="frmExam2Word" style="text-align:center;">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMDkxODE2MTUPZBYCZg9kFgQCAQ88KwAEAQAPFgIeBVZhbHVlBRR+L3BpY3R1cmVzLzEzMTUzLmpwZ2RkAgMPDxYCHgRUZXh0BT8g4LiE4Li44LiT4LiZ4Li44LiB4Li54LilICDguYHguJTguIfguKrguKHguKDguLLguJ7guKDguLnguKHguLRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAgUvY3RsMDAkTWFpbkNvbnRlbnQkcGFuZWxXb3JkJFJQTUVOVSRCdEV4cG9ydFdvcmQFLmN0bDAwJE1haW5Db250ZW50JHBhbmVsV29yZCRSUE1FTlUkQnRFeHBvcnRQREY4lBUmH95cdilftNFFtdeIuD3cjI5pBFNfAuKfhYanpQ==" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAN8jb9YuhxaMEoTFunWpdHKaXHoDsKZU6Vp093uX8SaDtMZvCMpF8D/K8DDVxEXzYq4/pZcEbl8AZDLwL1xwDS/noFT2R6FpzcVhKNaj9zQHA==" />
+</div>
+        <script id="dxss_1421562278" type="text/javascript">
+<!--
+window.__aspxServerFormID = 'frmExam2Word';
+
+//-->
+</script><div id="MainContent_panelWord" style="width:100%;">
+	
+                    <table id="MainContent_panelWord_tbdata" width="100%">
+		<tr>
+			<td>&nbsp</td>
+			<td style="padding:10Px">
+                                <table class="dxrpControlGB" cellspacing="0" cellpadding="0" id="MainContent_panelWord_RPDOCUMENT" style="width:100%;border-collapse:collapse;border-collapse:separate;margin-left:0px;margin-right:0px;margin-top:6px;margin-bottom:0px;">
+				<tr>
+					<td valign="top"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+						<tr>
+							<td><img class="dxWeb_rpGroupBoxTopLeftCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td><td class="dxrpNHTE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td><td><img class="dxWeb_rpGroupBoxTopRightCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td>
+						</tr><tr>
+							<td class="dxrpLE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td><td id="MainContent_panelWord_RPDOCUMENT_RPC" class="dxrp dxrpcontent" style="width:100%;padding-left:6px;padding-right:6px;padding-top:6px;padding-bottom:6px;"><div id="MainContent_panelWord_RPDOCUMENT_GBC" style="position:relative;top:-18px;left:-2px;text-align:left;margin-bottom:-12px;">
+								<span class="dxrpHeader" style="padding-left:3px;padding-right:3px;padding-top:0px;padding-bottom:0px;"><span id="MainContent_panelWord_RPDOCUMENT_RPHT">ตัวอย่างก่อนพิมพ์</span></span>
+							</div>
+                                            <ul id="MainContent_panelWord_RPDOCUMENT_UlWord" class="list"><span><table>
+								<tr>
+									<td><label class="dxeBase" id="MainContent_panelWord_RPDOCUMENT_lbtitle">รหัสข้อสอบ 4523 วิชา : คณิตศาสตร์ ระดับชั้น : ประถมศึกษา ปีที่ 1<br /></label><script id="dxss_1593027744" type="text/javascript">
+<!--
+aspxAddDisabledItems('MainContent_panelWord_RPDOCUMENT_lbtitle',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientLabel('MainContent_panelWord_RPDOCUMENT_lbtitle');
+window['lbtitle'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT$lbtitle';
+dxo.InlineInitialize();
+
+//-->
+</script></td>
+								</tr>
+							</table><table>
+								<tr>
+									<td><label class="dxeBase" id="MainContent_panelWord_RPDOCUMENT_lbProblem1">1. อะไรเอ่ย ทดสอบ =??</label><script id="dxss_2124878536" type="text/javascript">
+<!--
+aspxAddDisabledItems('MainContent_panelWord_RPDOCUMENT_lbProblem1',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientLabel('MainContent_panelWord_RPDOCUMENT_lbProblem1');
+window['lbProblem1'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT$lbProblem1';
+dxo.InlineInitialize();
+
+//-->
+</script></td>
+								</tr>
+							</table><table>
+								<tr>
+									<td><label class="dxeBase" id="MainContent_panelWord_RPDOCUMENT_lbChoice0">1. 5<br /></label><script id="dxss_542147253" type="text/javascript">
+<!--
+aspxAddDisabledItems('MainContent_panelWord_RPDOCUMENT_lbChoice0',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientLabel('MainContent_panelWord_RPDOCUMENT_lbChoice0');
+window['lbChoice0'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT$lbChoice0';
+dxo.InlineInitialize();
+
+//-->
+</script></br></br><label class="dxeBase" id="MainContent_panelWord_RPDOCUMENT_lbChoice1">2. 6<br /></label><script id="dxss_169188299" type="text/javascript">
+<!--
+aspxAddDisabledItems('MainContent_panelWord_RPDOCUMENT_lbChoice1',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientLabel('MainContent_panelWord_RPDOCUMENT_lbChoice1');
+window['lbChoice1'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT$lbChoice1';
+dxo.InlineInitialize();
+
+//-->
+</script></br></br><label class="dxeBase" id="MainContent_panelWord_RPDOCUMENT_lbChoice2">3. 7<br /></label><script id="dxss_1323209770" type="text/javascript">
+<!--
+aspxAddDisabledItems('MainContent_panelWord_RPDOCUMENT_lbChoice2',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientLabel('MainContent_panelWord_RPDOCUMENT_lbChoice2');
+window['lbChoice2'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT$lbChoice2';
+dxo.InlineInitialize();
+
+//-->
+</script></br></br><label class="dxeBase" id="MainContent_panelWord_RPDOCUMENT_lbChoice3">4. 10<br /></label><script id="dxss_626267254" type="text/javascript">
+<!--
+aspxAddDisabledItems('MainContent_panelWord_RPDOCUMENT_lbChoice3',[[['dxeDisabled'],[''],['']]]);
+
+var dxo = new ASPxClientLabel('MainContent_panelWord_RPDOCUMENT_lbChoice3');
+window['lbChoice3'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT$lbChoice3';
+dxo.InlineInitialize();
+
+//-->
+</script></br></br></td>
+								</tr>
+							</table></span></ul>        
+                                        </td><td class="dxrpRE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td>
+						</tr><tr>
+							<td><img class="dxWeb_rpGroupBoxBottomLeftCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td><td class="dxrpBE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td><td><img class="dxWeb_rpGroupBoxBottomRightCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table><script id="dxss_537792473" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientRoundPanel('MainContent_panelWord_RPDOCUMENT');
+window['RPDOCUMENT'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPDOCUMENT';
+dxo.isGroupBox = true;
+dxo.InlineInitialize();
+
+//-->
+</script>
+                            </td>
+		</tr>
+		<tr>
+			<td></td>
+			<td style="padding:10Px">
+                                <table class="dxrpControlGB" cellspacing="0" cellpadding="0" id="MainContent_panelWord_RPMENU" style="width:100%;border-collapse:collapse;border-collapse:separate;margin-left:0px;margin-right:0px;margin-top:6px;margin-bottom:0px;">
+				<tr>
+					<td valign="top"><table cellspacing="0" cellpadding="0" style="width:100%;border-collapse:collapse;border-collapse:separate;">
+						<tr>
+							<td><img class="dxWeb_rpGroupBoxTopLeftCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td><td class="dxrpNHTE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td><td><img class="dxWeb_rpGroupBoxTopRightCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td>
+						</tr><tr>
+							<td class="dxrpLE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td><td id="MainContent_panelWord_RPMENU_RPC" class="dxrp dxrpcontent" style="width:100%;padding-left:6px;padding-right:6px;padding-top:6px;padding-bottom:6px;"><div id="MainContent_panelWord_RPMENU_GBC" style="position:relative;top:-18px;left:-2px;text-align:left;margin-bottom:-12px;">
+								<span class="dxrpHeader" style="padding-left:3px;padding-right:3px;padding-top:0px;padding-bottom:0px;"><span id="MainContent_panelWord_RPMENU_RPHT">การส่งออกเอกสาร</span></span>
+							</div>
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <input type="image" name="ctl00$MainContent$panelWord$RPMENU$BtExportWord" id="MainContent_panelWord_RPMENU_BtExportWord" src="images/wordBT.png" align="middle" style="background-color:White;" />        
+                                                    </td>
+                                                    <td>&nbsp</td>
+                                                    <td>
+                                                        <input type="image" name="ctl00$MainContent$panelWord$RPMENU$BtExportPDF" id="MainContent_panelWord_RPMENU_BtExportPDF" src="images/pdfBT.png" align="middle" style="background-color:White;" />        
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td><td class="dxrpRE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td>
+						</tr><tr>
+							<td><img class="dxWeb_rpGroupBoxBottomLeftCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td><td class="dxrpBE"><div style="height:1px;width:1px;overflow:hidden;">
+
+							</div></td><td><img class="dxWeb_rpGroupBoxBottomRightCorner" src="/testonline/DXR.axd?r=1_5-uiIP8" alt="" /></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table><script id="dxss_1906314604" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientRoundPanel('MainContent_panelWord_RPMENU');
+window['RPMENU'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord$RPMENU';
+dxo.isGroupBox = true;
+dxo.InlineInitialize();
+
+//-->
+</script>
+                            </td>
+		</tr>
+	</table>
+	
+                    
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                
+</div><script id="dxss_357210140" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientPanel('MainContent_panelWord');
+window['panelWord'] = dxo;
+dxo.uniqueID = 'ctl00$MainContent$panelWord';
+dxo.InlineInitialize();
+
+//-->
+</script>
+    </form>            
+
+		</div>
+        
+	</div>
+    
+	<script type="text/javascript" src="Scripts/snap.js"></script>
+	<script type="text/javascript">
+
+	    var 
+
+	    // Helper
+		$ = function (id) {
+		    return document.getElementById(id);
+		},
+
+	    // Instance
+		snapper = new Snap({
+		    element: document.getElementById('content'),
+		    disable: 'right'
+		}),
+
+	    // 
+		UpdateDrawers = function () {
+		    var state = snapper.state(),
+				towards = state.info.towards,
+				opening = state.info.opening;
+		    if (opening == 'right' && towards == 'left') {
+		        $('right-drawer').classList.add('active-drawer');
+		        $('left-drawer').classList.remove('active-drawer');
+		    } else if (opening == 'left' && towards == 'right') {
+		        $('right-drawer').classList.remove('active-drawer');
+		        $('left-drawer').classList.add('active-drawer');
+		    }
+		};
+
+	    snapper.on('drag', UpdateDrawers);
+	    snapper.on('animating', UpdateDrawers);
+	    snapper.on('animated', UpdateDrawers);
+
+	    $('toggle-left').addEventListener('click', function () {
+	        snapper.open('left');
+	    });
+
+	    $('toggle-right').addEventListener('click', function () {
+	        snapper.open('right');
+	    });
+		
+	</script>
+	<script type="text/javascript">
+	    !function (d, s, id) {
+	        var js, fjs = d.getElementsByTagName(s)[0];
+	        if (!d.getElementById(id)) {
+	            js = d.createElement(s); js.id = id; js.src = "Scripts/widgets.js";
+	            fjs.parentNode.insertBefore(js, fjs);
+	        }
+	    } (document, "script", "twitter-wjs");
+     </script>		
+    
+
+</body>
+</html>

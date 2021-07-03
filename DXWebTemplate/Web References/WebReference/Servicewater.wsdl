@@ -1,0 +1,1799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upload_DataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Submit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Submitmeter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitmeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitmeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Submitwaterapplicant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitwaterapplicantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitwaterapplicantResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Submitdetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitdetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitdetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Summitauthorities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SummitauthoritiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SummitauthoritiesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sendapprove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendapproveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendapproveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Submitapprove">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitapproveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitapproveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="approve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="approveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="approveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="waterusernumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numberpetition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="waterusernumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="waterusernumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="view_user_water">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id_petition_information" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="view_user_waterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="view_user_waterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_petition_information">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_petition_informationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_petition_informationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_Meter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idpetition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_MeterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_MeterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_water_applicant">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idpetition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_water_applicantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_water_applicantResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idpetition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_detailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_detailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_authorities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idpetition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_authoritiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_authoritiesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_approve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idpetition" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="List_approveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="List_approveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_water_user">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_water_userResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Search_water_userResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_requst_instal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search_requst_instalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Search_requst_instalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_approve_request">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="search_approve_requestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="search_approve_requestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ViewGps_Location">
+        <s:complexType />
+      </s:element>
+      <s:element name="ViewGps_LocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ViewGps_LocationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_Data" />
+  </wsdl:message>
+  <wsdl:message name="Upload_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:Submit" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitmeterSoapIn">
+    <wsdl:part name="parameters" element="tns:Submitmeter" />
+  </wsdl:message>
+  <wsdl:message name="SubmitmeterSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitmeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitwaterapplicantSoapIn">
+    <wsdl:part name="parameters" element="tns:Submitwaterapplicant" />
+  </wsdl:message>
+  <wsdl:message name="SubmitwaterapplicantSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitwaterapplicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitdetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Submitdetails" />
+  </wsdl:message>
+  <wsdl:message name="SubmitdetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitdetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SummitauthoritiesSoapIn">
+    <wsdl:part name="parameters" element="tns:Summitauthorities" />
+  </wsdl:message>
+  <wsdl:message name="SummitauthoritiesSoapOut">
+    <wsdl:part name="parameters" element="tns:SummitauthoritiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendapproveSoapIn">
+    <wsdl:part name="parameters" element="tns:Sendapprove" />
+  </wsdl:message>
+  <wsdl:message name="SendapproveSoapOut">
+    <wsdl:part name="parameters" element="tns:SendapproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitapproveSoapIn">
+    <wsdl:part name="parameters" element="tns:Submitapprove" />
+  </wsdl:message>
+  <wsdl:message name="SubmitapproveSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitapproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="approveSoapIn">
+    <wsdl:part name="parameters" element="tns:approve" />
+  </wsdl:message>
+  <wsdl:message name="approveSoapOut">
+    <wsdl:part name="parameters" element="tns:approveResponse" />
+  </wsdl:message>
+  <wsdl:message name="waterusernumberSoapIn">
+    <wsdl:part name="parameters" element="tns:waterusernumber" />
+  </wsdl:message>
+  <wsdl:message name="waterusernumberSoapOut">
+    <wsdl:part name="parameters" element="tns:waterusernumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="view_user_waterSoapIn">
+    <wsdl:part name="parameters" element="tns:view_user_water" />
+  </wsdl:message>
+  <wsdl:message name="view_user_waterSoapOut">
+    <wsdl:part name="parameters" element="tns:view_user_waterResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_petition_informationSoapIn">
+    <wsdl:part name="parameters" element="tns:List_petition_information" />
+  </wsdl:message>
+  <wsdl:message name="List_petition_informationSoapOut">
+    <wsdl:part name="parameters" element="tns:List_petition_informationResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_MeterSoapIn">
+    <wsdl:part name="parameters" element="tns:List_Meter" />
+  </wsdl:message>
+  <wsdl:message name="List_MeterSoapOut">
+    <wsdl:part name="parameters" element="tns:List_MeterResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_water_applicantSoapIn">
+    <wsdl:part name="parameters" element="tns:List_water_applicant" />
+  </wsdl:message>
+  <wsdl:message name="List_water_applicantSoapOut">
+    <wsdl:part name="parameters" element="tns:List_water_applicantResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_detailsSoapIn">
+    <wsdl:part name="parameters" element="tns:List_details" />
+  </wsdl:message>
+  <wsdl:message name="List_detailsSoapOut">
+    <wsdl:part name="parameters" element="tns:List_detailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_authoritiesSoapIn">
+    <wsdl:part name="parameters" element="tns:List_authorities" />
+  </wsdl:message>
+  <wsdl:message name="List_authoritiesSoapOut">
+    <wsdl:part name="parameters" element="tns:List_authoritiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="List_approveSoapIn">
+    <wsdl:part name="parameters" element="tns:List_approve" />
+  </wsdl:message>
+  <wsdl:message name="List_approveSoapOut">
+    <wsdl:part name="parameters" element="tns:List_approveResponse" />
+  </wsdl:message>
+  <wsdl:message name="Search_water_userSoapIn">
+    <wsdl:part name="parameters" element="tns:Search_water_user" />
+  </wsdl:message>
+  <wsdl:message name="Search_water_userSoapOut">
+    <wsdl:part name="parameters" element="tns:Search_water_userResponse" />
+  </wsdl:message>
+  <wsdl:message name="Search_requst_instalSoapIn">
+    <wsdl:part name="parameters" element="tns:Search_requst_instal" />
+  </wsdl:message>
+  <wsdl:message name="Search_requst_instalSoapOut">
+    <wsdl:part name="parameters" element="tns:Search_requst_instalResponse" />
+  </wsdl:message>
+  <wsdl:message name="search_approve_requestSoapIn">
+    <wsdl:part name="parameters" element="tns:search_approve_request" />
+  </wsdl:message>
+  <wsdl:message name="search_approve_requestSoapOut">
+    <wsdl:part name="parameters" element="tns:search_approve_requestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ViewGps_LocationSoapIn">
+    <wsdl:part name="parameters" element="tns:ViewGps_Location" />
+  </wsdl:message>
+  <wsdl:message name="ViewGps_LocationSoapOut">
+    <wsdl:part name="parameters" element="tns:ViewGps_LocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Upload_DataHttpGetIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Upload_DataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpGetIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitmeterHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitmeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitwaterapplicantHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitwaterapplicantHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitdetailsHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitdetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SummitauthoritiesHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SummitauthoritiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendapproveHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendapproveHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitapproveHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitapproveHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="approveHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="approveHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="waterusernumberHttpGetIn">
+    <wsdl:part name="numberpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="waterusernumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="view_user_waterHttpGetIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="view_user_waterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_petition_informationHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_petition_informationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_MeterHttpGetIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_MeterHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_water_applicantHttpGetIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_water_applicantHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_detailsHttpGetIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_detailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_authoritiesHttpGetIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_authoritiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_approveHttpGetIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_approveHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_water_userHttpGetIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_water_userHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_requst_instalHttpGetIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_requst_instalHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="search_approve_requestHttpGetIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="search_approve_requestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ViewGps_LocationHttpGetIn" />
+  <wsdl:message name="ViewGps_LocationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Upload_DataHttpPostIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Upload_DataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpPostIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitmeterHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitmeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitwaterapplicantHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitwaterapplicantHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitdetailsHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitdetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SummitauthoritiesHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SummitauthoritiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendapproveHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendapproveHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitapproveHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SubmitapproveHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="approveHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="approveHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="waterusernumberHttpPostIn">
+    <wsdl:part name="numberpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="waterusernumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="view_user_waterHttpPostIn">
+    <wsdl:part name="id_petition_information" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="view_user_waterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_petition_informationHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_petition_informationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_MeterHttpPostIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_MeterHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_water_applicantHttpPostIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_water_applicantHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_detailsHttpPostIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_detailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_authoritiesHttpPostIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_authoritiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="List_approveHttpPostIn">
+    <wsdl:part name="idpetition" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="List_approveHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_water_userHttpPostIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_water_userHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_requst_instalHttpPostIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Search_requst_instalHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="search_approve_requestHttpPostIn">
+    <wsdl:part name="jsonString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="search_approve_requestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ViewGps_LocationHttpPostIn" />
+  <wsdl:message name="ViewGps_LocationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebService2Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <wsdl:input message="tns:Upload_DataSoapIn" />
+      <wsdl:output message="tns:Upload_DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <wsdl:input message="tns:SubmitSoapIn" />
+      <wsdl:output message="tns:SubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <wsdl:input message="tns:SubmitmeterSoapIn" />
+      <wsdl:output message="tns:SubmitmeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <wsdl:input message="tns:SubmitwaterapplicantSoapIn" />
+      <wsdl:output message="tns:SubmitwaterapplicantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <wsdl:input message="tns:SubmitdetailsSoapIn" />
+      <wsdl:output message="tns:SubmitdetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <wsdl:input message="tns:SummitauthoritiesSoapIn" />
+      <wsdl:output message="tns:SummitauthoritiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <wsdl:input message="tns:SendapproveSoapIn" />
+      <wsdl:output message="tns:SendapproveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <wsdl:input message="tns:SubmitapproveSoapIn" />
+      <wsdl:output message="tns:SubmitapproveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <wsdl:input message="tns:approveSoapIn" />
+      <wsdl:output message="tns:approveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <wsdl:input message="tns:waterusernumberSoapIn" />
+      <wsdl:output message="tns:waterusernumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <wsdl:input message="tns:view_user_waterSoapIn" />
+      <wsdl:output message="tns:view_user_waterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <wsdl:input message="tns:List_petition_informationSoapIn" />
+      <wsdl:output message="tns:List_petition_informationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <wsdl:input message="tns:List_MeterSoapIn" />
+      <wsdl:output message="tns:List_MeterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <wsdl:input message="tns:List_water_applicantSoapIn" />
+      <wsdl:output message="tns:List_water_applicantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <wsdl:input message="tns:List_detailsSoapIn" />
+      <wsdl:output message="tns:List_detailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <wsdl:input message="tns:List_authoritiesSoapIn" />
+      <wsdl:output message="tns:List_authoritiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <wsdl:input message="tns:List_approveSoapIn" />
+      <wsdl:output message="tns:List_approveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <wsdl:input message="tns:Search_water_userSoapIn" />
+      <wsdl:output message="tns:Search_water_userSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <wsdl:input message="tns:Search_requst_instalSoapIn" />
+      <wsdl:output message="tns:Search_requst_instalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <wsdl:input message="tns:search_approve_requestSoapIn" />
+      <wsdl:output message="tns:search_approve_requestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <wsdl:input message="tns:ViewGps_LocationSoapIn" />
+      <wsdl:output message="tns:ViewGps_LocationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService2HttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <wsdl:input message="tns:Upload_DataHttpGetIn" />
+      <wsdl:output message="tns:Upload_DataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <wsdl:input message="tns:SubmitHttpGetIn" />
+      <wsdl:output message="tns:SubmitHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <wsdl:input message="tns:SubmitmeterHttpGetIn" />
+      <wsdl:output message="tns:SubmitmeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <wsdl:input message="tns:SubmitwaterapplicantHttpGetIn" />
+      <wsdl:output message="tns:SubmitwaterapplicantHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <wsdl:input message="tns:SubmitdetailsHttpGetIn" />
+      <wsdl:output message="tns:SubmitdetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <wsdl:input message="tns:SummitauthoritiesHttpGetIn" />
+      <wsdl:output message="tns:SummitauthoritiesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <wsdl:input message="tns:SendapproveHttpGetIn" />
+      <wsdl:output message="tns:SendapproveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <wsdl:input message="tns:SubmitapproveHttpGetIn" />
+      <wsdl:output message="tns:SubmitapproveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <wsdl:input message="tns:approveHttpGetIn" />
+      <wsdl:output message="tns:approveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <wsdl:input message="tns:waterusernumberHttpGetIn" />
+      <wsdl:output message="tns:waterusernumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <wsdl:input message="tns:view_user_waterHttpGetIn" />
+      <wsdl:output message="tns:view_user_waterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <wsdl:input message="tns:List_petition_informationHttpGetIn" />
+      <wsdl:output message="tns:List_petition_informationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <wsdl:input message="tns:List_MeterHttpGetIn" />
+      <wsdl:output message="tns:List_MeterHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <wsdl:input message="tns:List_water_applicantHttpGetIn" />
+      <wsdl:output message="tns:List_water_applicantHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <wsdl:input message="tns:List_detailsHttpGetIn" />
+      <wsdl:output message="tns:List_detailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <wsdl:input message="tns:List_authoritiesHttpGetIn" />
+      <wsdl:output message="tns:List_authoritiesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <wsdl:input message="tns:List_approveHttpGetIn" />
+      <wsdl:output message="tns:List_approveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <wsdl:input message="tns:Search_water_userHttpGetIn" />
+      <wsdl:output message="tns:Search_water_userHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <wsdl:input message="tns:Search_requst_instalHttpGetIn" />
+      <wsdl:output message="tns:Search_requst_instalHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <wsdl:input message="tns:search_approve_requestHttpGetIn" />
+      <wsdl:output message="tns:search_approve_requestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <wsdl:input message="tns:ViewGps_LocationHttpGetIn" />
+      <wsdl:output message="tns:ViewGps_LocationHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService2HttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <wsdl:input message="tns:Upload_DataHttpPostIn" />
+      <wsdl:output message="tns:Upload_DataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <wsdl:input message="tns:SubmitHttpPostIn" />
+      <wsdl:output message="tns:SubmitHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <wsdl:input message="tns:SubmitmeterHttpPostIn" />
+      <wsdl:output message="tns:SubmitmeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <wsdl:input message="tns:SubmitwaterapplicantHttpPostIn" />
+      <wsdl:output message="tns:SubmitwaterapplicantHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <wsdl:input message="tns:SubmitdetailsHttpPostIn" />
+      <wsdl:output message="tns:SubmitdetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <wsdl:input message="tns:SummitauthoritiesHttpPostIn" />
+      <wsdl:output message="tns:SummitauthoritiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <wsdl:input message="tns:SendapproveHttpPostIn" />
+      <wsdl:output message="tns:SendapproveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <wsdl:input message="tns:SubmitapproveHttpPostIn" />
+      <wsdl:output message="tns:SubmitapproveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <wsdl:input message="tns:approveHttpPostIn" />
+      <wsdl:output message="tns:approveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <wsdl:input message="tns:waterusernumberHttpPostIn" />
+      <wsdl:output message="tns:waterusernumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <wsdl:input message="tns:view_user_waterHttpPostIn" />
+      <wsdl:output message="tns:view_user_waterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <wsdl:input message="tns:List_petition_informationHttpPostIn" />
+      <wsdl:output message="tns:List_petition_informationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <wsdl:input message="tns:List_MeterHttpPostIn" />
+      <wsdl:output message="tns:List_MeterHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <wsdl:input message="tns:List_water_applicantHttpPostIn" />
+      <wsdl:output message="tns:List_water_applicantHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <wsdl:input message="tns:List_detailsHttpPostIn" />
+      <wsdl:output message="tns:List_detailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <wsdl:input message="tns:List_authoritiesHttpPostIn" />
+      <wsdl:output message="tns:List_authoritiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <wsdl:input message="tns:List_approveHttpPostIn" />
+      <wsdl:output message="tns:List_approveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <wsdl:input message="tns:Search_water_userHttpPostIn" />
+      <wsdl:output message="tns:Search_water_userHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <wsdl:input message="tns:Search_requst_instalHttpPostIn" />
+      <wsdl:output message="tns:Search_requst_instalHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <wsdl:input message="tns:search_approve_requestHttpPostIn" />
+      <wsdl:output message="tns:search_approve_requestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <wsdl:input message="tns:ViewGps_LocationHttpPostIn" />
+      <wsdl:output message="tns:ViewGps_LocationHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService2Soap" type="tns:WebService2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <soap:operation soapAction="http://tempuri.org/Upload_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <soap:operation soapAction="http://tempuri.org/Submit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <soap:operation soapAction="http://tempuri.org/Submitmeter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <soap:operation soapAction="http://tempuri.org/Submitwaterapplicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <soap:operation soapAction="http://tempuri.org/Submitdetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <soap:operation soapAction="http://tempuri.org/Summitauthorities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <soap:operation soapAction="http://tempuri.org/Sendapprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <soap:operation soapAction="http://tempuri.org/Submitapprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <soap:operation soapAction="http://tempuri.org/approve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <soap:operation soapAction="http://tempuri.org/waterusernumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <soap:operation soapAction="http://tempuri.org/view_user_water" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <soap:operation soapAction="http://tempuri.org/List_petition_information" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <soap:operation soapAction="http://tempuri.org/List_Meter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <soap:operation soapAction="http://tempuri.org/List_water_applicant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <soap:operation soapAction="http://tempuri.org/List_details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <soap:operation soapAction="http://tempuri.org/List_authorities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <soap:operation soapAction="http://tempuri.org/List_approve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <soap:operation soapAction="http://tempuri.org/Search_water_user" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <soap:operation soapAction="http://tempuri.org/Search_requst_instal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <soap:operation soapAction="http://tempuri.org/search_approve_request" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <soap:operation soapAction="http://tempuri.org/ViewGps_Location" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService2Soap12" type="tns:WebService2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <soap12:operation soapAction="http://tempuri.org/Upload_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <soap12:operation soapAction="http://tempuri.org/Submit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <soap12:operation soapAction="http://tempuri.org/Submitmeter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <soap12:operation soapAction="http://tempuri.org/Submitwaterapplicant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <soap12:operation soapAction="http://tempuri.org/Submitdetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <soap12:operation soapAction="http://tempuri.org/Summitauthorities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <soap12:operation soapAction="http://tempuri.org/Sendapprove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <soap12:operation soapAction="http://tempuri.org/Submitapprove" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <soap12:operation soapAction="http://tempuri.org/approve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <soap12:operation soapAction="http://tempuri.org/waterusernumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <soap12:operation soapAction="http://tempuri.org/view_user_water" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <soap12:operation soapAction="http://tempuri.org/List_petition_information" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <soap12:operation soapAction="http://tempuri.org/List_Meter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <soap12:operation soapAction="http://tempuri.org/List_water_applicant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <soap12:operation soapAction="http://tempuri.org/List_details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <soap12:operation soapAction="http://tempuri.org/List_authorities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <soap12:operation soapAction="http://tempuri.org/List_approve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <soap12:operation soapAction="http://tempuri.org/Search_water_user" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <soap12:operation soapAction="http://tempuri.org/Search_requst_instal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <soap12:operation soapAction="http://tempuri.org/search_approve_request" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <soap12:operation soapAction="http://tempuri.org/ViewGps_Location" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService2HttpGet" type="tns:WebService2HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <http:operation location="/Upload_Data" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <http:operation location="/Submit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <http:operation location="/Submitmeter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <http:operation location="/Submitwaterapplicant" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <http:operation location="/Submitdetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <http:operation location="/Summitauthorities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <http:operation location="/Sendapprove" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <http:operation location="/Submitapprove" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <http:operation location="/approve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <http:operation location="/waterusernumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <http:operation location="/view_user_water" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <http:operation location="/List_petition_information" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <http:operation location="/List_Meter" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <http:operation location="/List_water_applicant" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <http:operation location="/List_details" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <http:operation location="/List_authorities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <http:operation location="/List_approve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <http:operation location="/Search_water_user" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <http:operation location="/Search_requst_instal" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <http:operation location="/search_approve_request" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <http:operation location="/ViewGps_Location" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService2HttpPost" type="tns:WebService2HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Data">
+      <http:operation location="/Upload_Data" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submit">
+      <http:operation location="/Submit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitmeter">
+      <http:operation location="/Submitmeter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitwaterapplicant">
+      <http:operation location="/Submitwaterapplicant" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitdetails">
+      <http:operation location="/Submitdetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Summitauthorities">
+      <http:operation location="/Summitauthorities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendapprove">
+      <http:operation location="/Sendapprove" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Submitapprove">
+      <http:operation location="/Submitapprove" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="approve">
+      <http:operation location="/approve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="waterusernumber">
+      <http:operation location="/waterusernumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="view_user_water">
+      <http:operation location="/view_user_water" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_petition_information">
+      <http:operation location="/List_petition_information" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_Meter">
+      <http:operation location="/List_Meter" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_water_applicant">
+      <http:operation location="/List_water_applicant" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_details">
+      <http:operation location="/List_details" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_authorities">
+      <http:operation location="/List_authorities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_approve">
+      <http:operation location="/List_approve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_water_user">
+      <http:operation location="/Search_water_user" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search_requst_instal">
+      <http:operation location="/Search_requst_instal" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search_approve_request">
+      <http:operation location="/search_approve_request" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewGps_Location">
+      <http:operation location="/ViewGps_Location" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService2">
+    <wsdl:port name="WebService2Soap" binding="tns:WebService2Soap">
+      <soap:address location="http://127.0.0.1/Servicewater/Servicewater.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService2Soap12" binding="tns:WebService2Soap12">
+      <soap12:address location="http://127.0.0.1/Servicewater/Servicewater.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService2HttpGet" binding="tns:WebService2HttpGet">
+      <http:address location="http://127.0.0.1/Servicewater/Servicewater.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService2HttpPost" binding="tns:WebService2HttpPost">
+      <http:address location="http://127.0.0.1/Servicewater/Servicewater.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

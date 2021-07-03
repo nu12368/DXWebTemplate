@@ -1,0 +1,1531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D187AE9-34DB-4AB2-B5DA-B1AD45CFE27F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DXWebTemplate</RootNamespace>
+    <AssemblyName>DXWebTemplate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Resources.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.1.Web, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.1.Web, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\_n\Downloads\Newtonsoft.Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.DataVisualization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v16.1, Version=16.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="approve_request.aspx" />
+    <Content Include="BackgroundImg\1.jpg" />
+    <Content Include="BackgroundImg\2.jpg" />
+    <Content Include="BackgroundImg\3.jpg" />
+    <Content Include="BackgroundImg\4.jpg" />
+    <Content Include="BackgroundImg\5.jpg" />
+    <Content Include="BackgroundImg\6.jpg" />
+    <Content Include="BackgroundImg\7.jpg" />
+    <Content Include="BackgroundImg\8.jpg" />
+    <Content Include="BackgroundImg\c.png" />
+    <Content Include="BackgroundImg\i1.jpg" />
+    <Content Include="BackgroundImg\new.png" />
+    <Content Include="BackgroundImg\new1.png" />
+    <Content Include="BackgroundImg\plan.png" />
+    <Content Include="BackgroundImg\plan2.jpg" />
+    <Content Include="BackgroundImg\plan2.png" />
+    <Content Include="BackgroundImg\plan2new.png" />
+    <Content Include="change_user_water.aspx" />
+    <Content Include="checkdata.aspx" />
+    <Content Include="checkdata_details.aspx" />
+    <Content Include="chk_login.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="details_water.aspx" />
+    <Content Include="edit_water_user.aspx" />
+    <Content Include="Getlocation.aspx" />
+    <Content Include="images\0.png" />
+    <Content Include="images\001.png" />
+    <Content Include="images\002.png" />
+    <Content Include="images\003.png" />
+    <Content Include="images\004.png" />
+    <Content Include="images\005.png" />
+    <Content Include="images\006.png" />
+    <Content Include="images\007.png" />
+    <Content Include="images\008.png" />
+    <Content Include="images\009.png" />
+    <Content Include="images\010.png" />
+    <Content Include="images\011.png" />
+    <Content Include="images\012.png" />
+    <Content Include="images\013.png" />
+    <Content Include="images\014.png" />
+    <Content Include="images\015.png" />
+    <Content Include="images\016.png" />
+    <Content Include="images\017.png" />
+    <Content Include="images\018.png" />
+    <Content Include="images\019.png" />
+    <Content Include="images\020.png" />
+    <Content Include="images\021.png" />
+    <Content Include="images\022.png" />
+    <Content Include="images\023.png" />
+    <Content Include="images\024.png" />
+    <Content Include="images\025.png" />
+    <Content Include="images\026.png" />
+    <Content Include="images\027.png" />
+    <Content Include="images\028.png" />
+    <Content Include="images\029.png" />
+    <Content Include="images\03.jpg" />
+    <Content Include="images\030.png" />
+    <Content Include="images\031.png" />
+    <Content Include="images\032.png" />
+    <Content Include="images\033.png" />
+    <Content Include="images\034.png" />
+    <Content Include="images\035.png" />
+    <Content Include="images\036.png" />
+    <Content Include="images\037.png" />
+    <Content Include="images\038.png" />
+    <Content Include="images\039.png" />
+    <Content Include="images\040.png" />
+    <Content Include="images\041.png" />
+    <Content Include="images\042.png" />
+    <Content Include="images\043.png" />
+    <Content Include="images\044.png" />
+    <Content Include="images\045.png" />
+    <Content Include="images\046.png" />
+    <Content Include="images\047.png" />
+    <Content Include="images\048.png" />
+    <Content Include="images\049.png" />
+    <Content Include="images\050.png" />
+    <Content Include="images\051.png" />
+    <Content Include="images\052.png" />
+    <Content Include="images\053.png" />
+    <Content Include="images\054.png" />
+    <Content Include="images\055.png" />
+    <Content Include="images\056.png" />
+    <Content Include="images\057.png" />
+    <Content Include="images\058.png" />
+    <Content Include="images\059.png" />
+    <Content Include="images\060.png" />
+    <Content Include="images\061.png" />
+    <Content Include="images\062.png" />
+    <Content Include="images\063.png" />
+    <Content Include="images\064.png" />
+    <Content Include="images\065.png" />
+    <Content Include="images\066.png" />
+    <Content Include="images\067.png" />
+    <Content Include="images\068.png" />
+    <Content Include="images\069.png" />
+    <Content Include="images\070.png" />
+    <Content Include="images\071.png" />
+    <Content Include="images\072.png" />
+    <Content Include="images\073.png" />
+    <Content Include="images\074.png" />
+    <Content Include="images\075.png" />
+    <Content Include="images\076.png" />
+    <Content Include="images\077.png" />
+    <Content Include="images\078.png" />
+    <Content Include="images\079.png" />
+    <Content Include="images\080.png" />
+    <Content Include="images\081.png" />
+    <Content Include="images\082.png" />
+    <Content Include="images\083.png" />
+    <Content Include="images\084.png" />
+    <Content Include="images\085.png" />
+    <Content Include="images\086.png" />
+    <Content Include="images\087.png" />
+    <Content Include="images\088.png" />
+    <Content Include="images\089.png" />
+    <Content Include="images\090.png" />
+    <Content Include="images\091.png" />
+    <Content Include="images\092.png" />
+    <Content Include="images\093.png" />
+    <Content Include="images\094.png" />
+    <Content Include="images\095.png" />
+    <Content Include="images\096.png" />
+    <Content Include="images\097.png" />
+    <Content Include="images\098.png" />
+    <Content Include="images\099.png" />
+    <Content Include="images\100.png" />
+    <Content Include="images\101.png" />
+    <Content Include="images\102.png" />
+    <Content Include="images\103.png" />
+    <Content Include="images\104.png" />
+    <Content Include="images\105.png" />
+    <Content Include="images\106.png" />
+    <Content Include="images\107.png" />
+    <Content Include="images\108.png" />
+    <Content Include="images\109.png" />
+    <Content Include="images\110.png" />
+    <Content Include="images\111.png" />
+    <Content Include="images\112.png" />
+    <Content Include="images\113.png" />
+    <Content Include="images\114.png" />
+    <Content Include="images\115.png" />
+    <Content Include="images\116.png" />
+    <Content Include="images\117.png" />
+    <Content Include="images\118.png" />
+    <Content Include="images\119.png" />
+    <Content Include="images\120.png" />
+    <Content Include="images\121.png" />
+    <Content Include="images\122.png" />
+    <Content Include="images\123.png" />
+    <Content Include="images\124.png" />
+    <Content Include="images\125.png" />
+    <Content Include="images\126.png" />
+    <Content Include="images\127.png" />
+    <Content Include="images\128.png" />
+    <Content Include="images\129.png" />
+    <Content Include="images\130.png" />
+    <Content Include="images\131.png" />
+    <Content Include="images\132.png" />
+    <Content Include="images\133.png" />
+    <Content Include="images\134.png" />
+    <Content Include="images\135.png" />
+    <Content Include="images\136.png" />
+    <Content Include="images\137.png" />
+    <Content Include="images\138.png" />
+    <Content Include="images\139.png" />
+    <Content Include="images\140.png" />
+    <Content Include="images\141.png" />
+    <Content Include="images\142.png" />
+    <Content Include="images\143.png" />
+    <Content Include="images\144.png" />
+    <Content Include="images\145.png" />
+    <Content Include="images\146.png" />
+    <Content Include="images\147.png" />
+    <Content Include="images\148.png" />
+    <Content Include="images\149.png" />
+    <Content Include="images\150.png" />
+    <Content Include="images\151.png" />
+    <Content Include="images\152.png" />
+    <Content Include="images\153.png" />
+    <Content Include="images\154.png" />
+    <Content Include="images\155.png" />
+    <Content Include="images\156.png" />
+    <Content Include="images\157.png" />
+    <Content Include="images\158.png" />
+    <Content Include="images\159.png" />
+    <Content Include="images\160.png" />
+    <Content Include="images\161.png" />
+    <Content Include="images\162.png" />
+    <Content Include="images\163.png" />
+    <Content Include="images\164.png" />
+    <Content Include="images\165.png" />
+    <Content Include="images\166.png" />
+    <Content Include="images\167.png" />
+    <Content Include="images\168.png" />
+    <Content Include="images\169.png" />
+    <Content Include="images\170.png" />
+    <Content Include="images\171.png" />
+    <Content Include="images\172.png" />
+    <Content Include="images\173.png" />
+    <Content Include="images\174.png" />
+    <Content Include="images\175.png" />
+    <Content Include="images\176.png" />
+    <Content Include="images\177.png" />
+    <Content Include="images\178.png" />
+    <Content Include="images\179.png" />
+    <Content Include="images\180.png" />
+    <Content Include="images\181.png" />
+    <Content Include="images\182.png" />
+    <Content Include="images\183.png" />
+    <Content Include="images\184.png" />
+    <Content Include="images\185.png" />
+    <Content Include="images\186.png" />
+    <Content Include="images\187.png" />
+    <Content Include="images\188.png" />
+    <Content Include="images\189.png" />
+    <Content Include="images\190.png" />
+    <Content Include="images\191.png" />
+    <Content Include="images\192.png" />
+    <Content Include="images\193.png" />
+    <Content Include="images\194.png" />
+    <Content Include="images\195.png" />
+    <Content Include="images\231.png" />
+    <Content Include="images\232.png" />
+    <Content Include="images\500-page.jpeg" />
+    <Content Include="images\556.png" />
+    <Content Include="images\62.png" />
+    <Content Include="images\acceptP.png" />
+    <Content Include="images\add-row-16.png" />
+    <Content Include="images\addpic.png" />
+    <Content Include="images\addstore.ico" />
+    <Content Include="images\addstore.png" />
+    <Content Include="images\addsubject.png" />
+    <Content Include="images\adduser.png" />
+    <Content Include="images\add_user.gif" />
+    <Content Include="images\Administrator.png" />
+    <Content Include="images\advanced-search.png" />
+    <Content Include="images\AllFace.png" />
+    <Content Include="images\answer-sheet.gif" />
+    <Content Include="images\apppassword.png" />
+    <Content Include="images\appuser.png" />
+    <Content Include="images\arrowright.png" />
+    <Content Include="images\arrows.jpg" />
+    <Content Include="images\arrows.png" />
+    <Content Include="images\arw.png" />
+    <Content Include="images\arws.png" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner_ori.jpg" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bgwac.jpg" />
+    <Content Include="images\bgwac5.jpg" />
+    <Content Include="images\blackboard.jpg" />
+    <Content Include="images\blue.png" />
+    <Content Include="images\board.png" />
+    <Content Include="images\body-bg.png" />
+    <Content Include="images\bullets.png" />
+    <Content Include="images\c.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="get_pic.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\1.png" />
+    <Content Include="images\10.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\4.png" />
+    <Content Include="images\5.png" />
+    <Content Include="images\6.png" />
+    <Content Include="images\7.png" />
+    <Content Include="images\add.png" />
+    <Content Include="images\Add_16x16.png" />
+    <Content Include="images\alarm.png" />
+    <Content Include="images\Alert.png" />
+    <Content Include="images\Apply_16x16.png" />
+    <Content Include="images\approve.png" />
+    <Content Include="images\bg.gif" />
+    <Content Include="images\bg2.png" />
+    <Content Include="images\bin.png" />
+    <Content Include="images\bin2.png" />
+    <Content Include="images\btnLogin.jpg" />
+    <Content Include="images\btnLogin.png" />
+    <Content Include="images\calendar-20.png" />
+    <Content Include="images\Calendar_24x24.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\cancel321.png" />
+    <Content Include="images\cancel322.png" />
+    <Content Include="images\CancelBT.png" />
+    <Content Include="images\Cancel_16x16.png" />
+    <Content Include="images\cc.png" />
+    <Content Include="images\Chalkboard.jpg" />
+    <Content Include="images\change-password.png" />
+    <Content Include="images\chart-2.jpg" />
+    <Content Include="images\Chart.ico" />
+    <Content Include="images\ChatFacebook.png" />
+    <Content Include="images\Choice1.jpg" />
+    <Content Include="images\Choice2.jpg" />
+    <Content Include="images\Choice3.jpg" />
+    <Content Include="images\Choice4.jpg" />
+    <Content Include="images\ck1_.png" />
+    <Content Include="images\ck2_.png" />
+    <Content Include="images\class.ico" />
+    <Content Include="images\Clear_16x16.png" />
+    <Content Include="images\closed.png" />
+    <Content Include="images\Close_16x16.png" />
+    <Content Include="images\collapse.png" />
+    <Content Include="images\contact-sprit.png" />
+    <Content Include="images\copyright.jpg" />
+    <Content Include="images\Copy_16x16.png" />
+    <Content Include="images\correct.png" />
+    <Content Include="images\correct2.png" />
+    <Content Include="images\csvBT.PNG" />
+    <Content Include="images\cust.ico" />
+    <Content Include="images\Customer_16x16.png" />
+    <Content Include="images\Customer_2.png" />
+    <Content Include="images\Customer_3.png" />
+    <Content Include="images\Customer_4.png" />
+    <Content Include="images\dashbaord.png" />
+    <Content Include="images\dashboard.png" />
+    <Content Include="images\dbicon.ico" />
+    <Content Include="images\DD.ico" />
+    <Content Include="images\DD.png" />
+    <Content Include="images\DDD.htm" />
+    <Content Include="images\delete-row-16.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\delete321.png" />
+    <Content Include="images\delete322.png" />
+    <Content Include="images\Delete_16x16.png" />
+    <Content Include="images\delete_garbage.png" />
+    <Content Include="images\delpic.png" />
+    <Content Include="images\delrow.png" />
+    <Content Include="images\del_user.png" />
+    <Content Include="images\doc.png" />
+    <Content Include="images\Doconline.png" />
+    <Content Include="images\DocumentOnline.ico" />
+    <Content Include="images\DocWord.ico" />
+    <Content Include="images\Edit_16x16.png" />
+    <Content Include="images\edit_properties.gif" />
+    <Content Include="images\elses.png" />
+    <Content Include="images\en.jpg" />
+    <Content Include="images\error.gif" />
+    <Content Include="images\ExamIcon.png" />
+    <Content Include="images\examIconLink.png" />
+    <Content Include="images\examSchedule.png" />
+    <Content Include="images\excelBT.PNG" />
+    <Content Include="images\expand-w.png" />
+    <Content Include="images\expand.png" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\file.png" />
+    <Content Include="images\finder.png" />
+    <Content Include="images\folder.png" />
+    <Content Include="images\footer-sprit.png" />
+    <Content Include="images\friendsFacebook.png" />
+    <Content Include="images\gbt.png" />
+    <Content Include="images\glyphicons-halflings-white.html" />
+    <Content Include="images\glyphicons-halflings.html" />
+    <Content Include="images\gmail.png" />
+    <Content Include="images\google.png" />
+    <Content Include="images\Graph.png" />
+    <Content Include="images\green-blank-blackboard.jpg" />
+    <Content Include="images\greencycle.png" />
+    <Content Include="images\header.png" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\hotmail.png" />
+    <Content Include="images\hrm.png" />
+    <Content Include="images\icon00.png" />
+    <Content Include="images\icon01.png" />
+    <Content Include="images\icon02.png" />
+    <Content Include="images\icon03.png" />
+    <Content Include="images\icon04.png" />
+    <Content Include="images\icon05.jpg" />
+    <Content Include="images\icon06.png" />
+    <Content Include="images\icon07.png" />
+    <Content Include="images\icons-sa7c41345d9.png" />
+    <Content Include="images\icon\Add_16x16.png" />
+    <Content Include="images\icon\Apply_16x16.png" />
+    <Content Include="images\icon\Cancel_16x16.png" />
+    <Content Include="images\icon\Clear_16x16.png" />
+    <Content Include="images\icon\Customer_16x16.png" />
+    <Content Include="images\icon\Customer_2.png" />
+    <Content Include="images\icon\Customer_3.png" />
+    <Content Include="images\icon\Customer_4.png" />
+    <Content Include="images\icon\Cut_16x16.png" />
+    <Content Include="images\icon\Edit_16x16.png" />
+    <Content Include="images\icon\emp_null.png" />
+    <Content Include="images\icon\MoveDown_16x16.png" />
+    <Content Include="images\icon\MoveUp_16x16.png" />
+    <Content Include="images\icon\PublicFix_16x16.png" />
+    <Content Include="images\icon\Refresh_16x16.png" />
+    <Content Include="images\icon\Save_16x16.png" />
+    <Content Include="images\icon\Team_group.png" />
+    <Content Include="images\icon\UserGroup_16x16.png" />
+    <Content Include="images\icon\warning-16.png" />
+    <Content Include="images\icon_delete.gif" />
+    <Content Include="images\images.png" />
+    <Content Include="images\imgedit.jpg" />
+    <Content Include="images\incorrect.png" />
+    <Content Include="images\infomation.ico" />
+    <Content Include="images\invite.gif" />
+    <Content Include="images\Key-Lock-icon.png" />
+    <Content Include="images\keylogin.png" />
+    <Content Include="images\Lesson.png" />
+    <Content Include="images\live.png" />
+    <Content Include="images\live2.png" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\login_icon.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo5.png" />
+    <Content Include="images\logoMain.ico" />
+    <Content Include="images\logoMain.png" />
+    <Content Include="images\logoMainWac.gif" />
+    <Content Include="images\logoMainWac_.gif" />
+    <Content Include="images\logoMainWac__.gif" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\logout2.png" />
+    <Content Include="images\logout_menubar.png" />
+    <Content Include="images\management.png" />
+    <Content Include="images\menu-icon.png" />
+    <Content Include="images\menu.gif" />
+    <Content Include="images\menu_icon\1-1.png" />
+    <Content Include="images\menu_icon\1-2.png" />
+    <Content Include="images\menu_icon\2-1.png" />
+    <Content Include="images\menu_icon\2-2.png" />
+    <Content Include="images\menu_icon\2-3.png" />
+    <Content Include="images\menu_icon\2-4.png" />
+    <Content Include="images\menu_icon\2-5.png" />
+    <Content Include="images\menu_icon\2-6.png" />
+    <Content Include="images\menu_icon\2-7.png" />
+    <Content Include="images\menu_icon\2-8.png" />
+    <Content Include="images\menu_icon\3-1.png" />
+    <Content Include="images\menu_icon\3-2.png" />
+    <Content Include="images\menu_icon\3-3.png" />
+    <Content Include="images\menu_icon\Bar_16x16.png" />
+    <Content Include="images\menu_icon\no.png" />
+    <Content Include="images\menu_icon\Spline_16x16.png" />
+    <Content Include="images\menu_icon\_1.1.png" />
+    <Content Include="images\menu_icon\_1.2.png" />
+    <Content Include="images\menu_icon\_1.3.png" />
+    <Content Include="images\menu_icon\_1.4.png" />
+    <Content Include="images\menu_icon\_1.5.png" />
+    <Content Include="images\multichoice.png" />
+    <Content Include="images\multiple-choice.jpg" />
+    <Content Include="images\music-wide.png" />
+    <Content Include="images\music-wide__.jpg" />
+    <Content Include="images\my-content.png" />
+    <Content Include="images\New.png" />
+    <Content Include="images\newexam.gif" />
+    <Content Include="images\New_icons_24.gif" />
+    <Content Include="images\NoAlert.png" />
+    <Content Include="images\nopic.gif" />
+    <Content Include="images\no_approve.png" />
+    <Content Include="images\omr.ico" />
+    <Content Include="images\opened.png" />
+    <Content Include="images\organize.png" />
+    <Content Include="images\overview.ico" />
+    <Content Include="images\overview.png" />
+    <Content Include="images\pdfBT.PNG" />
+    <Content Include="images\pen_edit.png" />
+    <Content Include="images\person.png" />
+    <Content Include="images\pic01.jpg" />
+    <Content Include="images\pic02.jpg" />
+    <Content Include="images\pic03.jpg" />
+    <Content Include="images\pic04.jpg" />
+    <Content Include="images\picicon.ico" />
+    <Content Include="images\Picon.png" />
+    <Content Include="images\Ploblem.jpg" />
+    <Content Include="images\Ploblem1.jpg" />
+    <Content Include="images\Ploblem10.jpg" />
+    <Content Include="images\Ploblem2.jpg" />
+    <Content Include="images\Ploblem3.jpg" />
+    <Content Include="images\Ploblem4.jpg" />
+    <Content Include="images\Ploblem5.jpg" />
+    <Content Include="images\Ploblem6.jpg" />
+    <Content Include="images\Ploblem7.jpg" />
+    <Content Include="images\Ploblem8.jpg" />
+    <Content Include="images\Ploblem9.jpg" />
+    <Content Include="images\plus-16.png" />
+    <Content Include="images\plus.gif" />
+    <Content Include="images\preview.gif" />
+    <Content Include="images\Print.png" />
+    <Content Include="images\printer.ico" />
+    <Content Include="images\Pro.png" />
+    <Content Include="images\Profile.png" />
+    <Content Include="images\profile_manage.png" />
+    <Content Include="images\p_warning.png" />
+    <Content Include="images\Random.png" />
+    <Content Include="images\rbt.png" />
+    <Content Include="images\read.png" />
+    <Content Include="images\ReallySory.PNG" />
+    <Content Include="images\Redcycle.png" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\refresh2.png" />
+    <Content Include="images\report1.png" />
+    <Content Include="images\report2.png" />
+    <Content Include="images\report3.png" />
+    <Content Include="images\return.ico" />
+    <Content Include="images\returns.png" />
+    <Content Include="images\right.ico" />
+    <Content Include="images\rpschool.ico" />
+    <Content Include="images\sanook.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\SaveBT.png" />
+    <Content Include="images\SaveBT32.png" />
+    <Content Include="images\SaveBt321.png" />
+    <Content Include="images\SaveBT322.png" />
+    <Content Include="images\saveprofile.png" />
+    <Content Include="images\Save_16x16.png" />
+    <Content Include="images\school.ico" />
+    <Content Include="images\search.png" />
+    <Content Include="images\shc.png" />
+    <Content Include="images\songcon.png" />
+    <Content Include="images\std-test.gif" />
+    <Content Include="images\std_activity.gif" />
+    <Content Include="images\storeB1.png" />
+    <Content Include="images\storeB2.png" />
+    <Content Include="images\Student.png" />
+    <Content Include="images\success.gif" />
+    <Content Include="images\symbol_calendar\Calendar_16x16.png" />
+    <Content Include="images\symbol_calendar\sym.png" />
+    <Content Include="images\symbol_calendar\waring_event.gif" />
+    <Content Include="images\symbol_customer\sym1.png" />
+    <Content Include="images\symbol_customer\sym2.png" />
+    <Content Include="images\teacher.ico" />
+    <Content Include="images\TeacherMenu.png" />
+    <Content Include="images\Testonline.png" />
+    <Content Include="images\text.ico" />
+    <Content Include="images\text.png" />
+    <Content Include="images\th.jpg" />
+    <Content Include="images\thairaj.png" />
+    <Content Include="images\timline.ico" />
+    <Content Include="images\tip.png" />
+    <Content Include="images\tonline.png" />
+    <Content Include="images\TonlineBaner.png" />
+    <Content Include="images\top.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\Under-Construction.jpg" />
+    <Content Include="images\underconstruction.jpg" />
+    <Content Include="images\undo.png" />
+    <Content Include="images\upload.png" />
+    <Content Include="images\UserGroup_16x16.png" />
+    <Content Include="images\users.gif" />
+    <Content Include="images\User_.ico" />
+    <Content Include="images\vdocon.png" />
+    <Content Include="images\vdoicon.ico" />
+    <Content Include="images\WAClessononlinE1.png" />
+    <Content Include="images\wacomr.png" />
+    <Content Include="images\WACtestbank1.png" />
+    <Content Include="images\WACtestonline1.png" />
+    <Content Include="images\Walking_32x32.png" />
+    <Content Include="images\warning.gif" />
+    <Content Include="images\warning.png" />
+    <Content Include="images\warning2.gif" />
+    <Content Include="images\wb001.png" />
+    <Content Include="images\wb002.png" />
+    <Content Include="images\wbu001.png" />
+    <Content Include="images\wbu002.png" />
+    <Content Include="images\whitecycle.png" />
+    <Content Include="images\Word.png" />
+    <Content Include="images\wordBT.PNG" />
+    <Content Include="images\wr001.png" />
+    <Content Include="images\wr002.png" />
+    <Content Include="images\youtube.png" />
+    <Content Include="images\_1.3.png" />
+    <Content Include="images\_1.4.png" />
+    <Content Include="images\ถูก.png" />
+    <Content Include="images\ผิด.png" />
+    <Content Include="image_question\profile.jpg" />
+    <Content Include="insertdata.aspx" />
+    <Content Include="jquery-easyui-1.4\changelog.txt" />
+    <Content Include="jquery-easyui-1.4\demo\demo.css" />
+    <Content Include="jquery-easyui-1.4\easyloader.js" />
+    <Content Include="jquery-easyui-1.4\jquery.easyui.min.js" />
+    <Content Include="jquery-easyui-1.4\jquery.min.js" />
+    <Content Include="jquery-easyui-1.4\licence_gpl.txt" />
+    <Content Include="jquery-easyui-1.4\readme.txt" />
+    <Content Include="jquery-easyui-1.4\themes\black\accordion.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\calendar.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\combo.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\combobox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\datagrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\datebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\dialog.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\easyui.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\filebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\blank.gif" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\loading.gif" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.4\themes\black\layout.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\linkbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\menu.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\menubutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\messager.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\numberbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\pagination.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\panel.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\progressbar.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\propertygrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\searchbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\slider.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\spinner.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\splitbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\tabs.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\textbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\tooltip.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\tree.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\validatebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\black\window.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\accordion.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\calendar.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\combo.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\combobox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\datagrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\datebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\dialog.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\easyui.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\filebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\blank.gif" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\loading.gif" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\layout.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\linkbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\menu.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\menubutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\messager.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\numberbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\pagination.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\panel.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\progressbar.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\propertygrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\searchbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\slider.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\spinner.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\splitbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\tabs.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\textbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\tooltip.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\tree.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\validatebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\bootstrap\window.css" />
+    <Content Include="jquery-easyui-1.4\themes\color.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\accordion.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\calendar.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\combo.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\combobox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\datagrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\datebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\dialog.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\easyui.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\filebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\blank.gif" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\loading.gif" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.4\themes\default\layout.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\linkbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\menu.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\menubutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\messager.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\numberbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\pagination.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\panel.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\progressbar.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\propertygrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\searchbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\slider.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\spinner.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\splitbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\tabs.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\textbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\tooltip.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\tree.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\validatebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\default\window.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\accordion.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\calendar.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\combo.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\combobox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\datagrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\datebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\dialog.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\easyui.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\filebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\blank.gif" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\loading.gif" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.4\themes\gray\layout.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\linkbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\menu.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\menubutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\messager.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\numberbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\pagination.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\panel.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\progressbar.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\propertygrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\searchbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\slider.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\spinner.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\splitbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\tabs.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\textbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\tooltip.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\tree.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\validatebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\gray\window.css" />
+    <Content Include="jquery-easyui-1.4\themes\icon.css" />
+    <Content Include="jquery-easyui-1.4\themes\icons\back.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\blank.gif" />
+    <Content Include="jquery-easyui-1.4\themes\icons\cancel.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\clear.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\cut.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\edit_add.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\edit_remove.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\filesave.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\filter.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\help.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\large_chart.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\large_clipart.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\large_picture.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\large_shapes.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\large_smartart.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\lock.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\man.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\mini_add.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\mini_edit.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\mini_refresh.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\no.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\ok.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\pencil.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\print.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\redo.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\reload.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\search.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\sum.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\tip.png" />
+    <Content Include="jquery-easyui-1.4\themes\icons\undo.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\accordion.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\calendar.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\combo.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\combobox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\datagrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\datebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\dialog.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\easyui.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\filebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\blank.gif" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\loading.gif" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.4\themes\metro\layout.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\linkbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\menu.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\menubutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\messager.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\numberbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\pagination.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\panel.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\progressbar.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\propertygrid.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\searchbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\slider.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\spinner.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\splitbutton.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\tabs.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\textbox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\tooltip.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\tree.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\validatebox.css" />
+    <Content Include="jquery-easyui-1.4\themes\metro\window.css" />
+    <Content Include="js\1.7.2jquery.min.js" />
+    <Content Include="js\1.8.9jquery-ui.js" />
+    <Content Include="js\ASPSnippets_Pager.min.js" />
+    <Content Include="js\jquery-1.10.0.min.js" />
+    <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-1.4.1.min.js" />
+    <Content Include="js\jquery-1.4.min.js" />
+    <Content Include="js\jquery-1.8.3.min.js" />
+    <Content Include="js\jquery-form.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.treeview.js" />
+    <Content Include="js\sme_js1.js" />
+    <Content Include="key.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="main_group.aspx" />
+    <Content Include="new_water.aspx" />
+    <Content Include="Pic_Profile\101.jpg" />
+    <Content Include="Pic_Profile\123.jpg" />
+    <Content Include="Pic_Profile\1234567890123.jpg" />
+    <Content Include="Pic_Profile\1410300007293.jpg" />
+    <Content Include="Pic_Profile\1542365265398.jpg" />
+    <Content Include="Pic_Profile\7141030002548.jpg" />
+    <Content Include="Pic_Profile\person.jpg" />
+    <Content Include="Pic_Profile\person.png" />
+    <Content Include="print_approve_request.aspx" />
+    <Content Include="print_water_user.aspx" />
+    <Content Include="recordapprove.aspx" />
+    <Content Include="request_instal.aspx" />
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Searchdata.aspx" />
+    <Content Include="search_approve_request.aspx" />
+    <Content Include="search_change_user_water.aspx" />
+    <Content Include="search_edit_water.aspx" />
+    <Content Include="Search_requst_instal.aspx" />
+    <Content Include="selectdata.aspx" />
+    <Content Include="styles.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\LoginStyle.css" />
+    <Content Include="Styles\LoginStyle2.css" />
+    <Content Include="Styles\Scrollbar.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\tree.css" />
+    <Content Include="images\angsa_0.ttf" />
+    <Content Include="images\ExamTest.doc" />
+    <Content Include="images\MyWord.doc" />
+    <Content Include="print.aspx" />
+    <Content Include="print_request_instal.aspx" />
+    <Content Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\WebReference\Servicewater.disco" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="WebUserControl1.ascx" />
+    <Content Include="WebUserControl2.ascx" />
+    <Content Include="WebUserControl3.ascx" />
+    <None Include="Properties\PublishProfiles\p.pubxml" />
+    <None Include="Properties\PublishProfiles\web.pubxml" />
+    <None Include="Properties\PublishProfiles\wwwww.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="App_Data\PublishProfiles\HRMs.pubxml" />
+    <None Include="App_Data\PublishProfiles\NewWacOmr.pubxml" />
+    <None Include="App_Data\PublishProfiles\wacOMR.pubxml" />
+    <Content Include="Content\HRM_Manual.docx" />
+    <Content Include="Content\HRM_Manual.PDF" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\JsAddPersonal.js" />
+    <Content Include="Scripts\jsapi.js" />
+    <Content Include="Scripts\JScript.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="upload_data.aspx" />
+    <Content Include="viewapproveuser.aspx" />
+    <Content Include="view_change_user_water.aspx" />
+    <Content Include="view_edit_water_user.aspx" />
+    <Content Include="view_menu.aspx" />
+    <Content Include="view_selectdata.aspx" />
+    <Content Include="view_user_water.aspx" />
+    <Content Include="water_user.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web2.config" />
+    <None Include="Web References\WebReference\Servicewater.wsdl" />
+    <None Include="Web2.Debug.config">
+      <DependentUpon>Web2.config</DependentUpon>
+    </None>
+    <None Include="Web2.Release.config">
+      <DependentUpon>Web2.config</DependentUpon>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="approve_request.aspx.cs">
+      <DependentUpon>approve_request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="approve_request.aspx.designer.cs">
+      <DependentUpon>approve_request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change_user_water.aspx.cs">
+      <DependentUpon>change_user_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change_user_water.aspx.designer.cs">
+      <DependentUpon>change_user_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChartControl.cs" />
+    <Compile Include="checkdata.aspx.cs">
+      <DependentUpon>checkdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkdata.aspx.designer.cs">
+      <DependentUpon>checkdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkdata_details.aspx.cs">
+      <DependentUpon>checkdata_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkdata_details.aspx.designer.cs">
+      <DependentUpon>checkdata_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chk_login.aspx.cs">
+      <DependentUpon>chk_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chk_login.aspx.designer.cs">
+      <DependentUpon>chk_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clsVar.cs" />
+    <Compile Include="cls_command.cs" />
+    <Compile Include="create_table.cs" />
+    <Compile Include="details_water.aspx.cs">
+      <DependentUpon>details_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="details_water.aspx.designer.cs">
+      <DependentUpon>details_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_water_user.aspx.cs">
+      <DependentUpon>edit_water_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_water_user.aspx.designer.cs">
+      <DependentUpon>edit_water_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Getlocation.aspx.cs">
+      <DependentUpon>Getlocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Getlocation.aspx.designer.cs">
+      <DependentUpon>Getlocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insertdata.aspx.cs">
+      <DependentUpon>insertdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="insertdata.aspx.designer.cs">
+      <DependentUpon>insertdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="key.aspx.cs">
+      <DependentUpon>key.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="key.aspx.designer.cs">
+      <DependentUpon>key.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LineChart.cs" />
+    <Compile Include="new_water.aspx.cs">
+      <DependentUpon>new_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_water.aspx.designer.cs">
+      <DependentUpon>new_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="print_approve_request.aspx.cs">
+      <DependentUpon>print_approve_request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print_approve_request.aspx.designer.cs">
+      <DependentUpon>print_approve_request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="print_water_user.aspx.cs">
+      <DependentUpon>print_water_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print_water_user.aspx.designer.cs">
+      <DependentUpon>print_water_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="get_pic.aspx.cs">
+      <DependentUpon>get_pic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="get_pic.aspx.designer.cs">
+      <DependentUpon>get_pic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main_group.aspx.cs">
+      <DependentUpon>main_group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main_group.aspx.designer.cs">
+      <DependentUpon>main_group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="recordapprove.aspx.cs">
+      <DependentUpon>recordapprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recordapprove.aspx.designer.cs">
+      <DependentUpon>recordapprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reports\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print_request_instal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="print_request_instal.designer.cs">
+      <DependentUpon>print_request_instal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report_approve_requst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report_approve_requst.Designer.cs">
+      <DependentUpon>report_approve_requst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report_water_user.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report_water_user.Designer.cs">
+      <DependentUpon>report_water_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="request_instal.aspx.cs">
+      <DependentUpon>request_instal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="request_instal.aspx.designer.cs">
+      <DependentUpon>request_instal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Searchdata.aspx.cs">
+      <DependentUpon>Searchdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Searchdata.aspx.designer.cs">
+      <DependentUpon>Searchdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search_approve_request.aspx.cs">
+      <DependentUpon>search_approve_request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search_approve_request.aspx.designer.cs">
+      <DependentUpon>search_approve_request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search_change_user_water.aspx.cs">
+      <DependentUpon>search_change_user_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search_change_user_water.aspx.designer.cs">
+      <DependentUpon>search_change_user_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search_edit_water.aspx.cs">
+      <DependentUpon>search_edit_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search_edit_water.aspx.designer.cs">
+      <DependentUpon>search_edit_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search_requst_instal.aspx.cs">
+      <DependentUpon>Search_requst_instal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search_requst_instal.aspx.designer.cs">
+      <DependentUpon>Search_requst_instal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="selectdata.aspx.cs">
+      <DependentUpon>selectdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="selectdata.aspx.designer.cs">
+      <DependentUpon>selectdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="upload_data.aspx.cs">
+      <DependentUpon>upload_data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="upload_data.aspx.designer.cs">
+      <DependentUpon>upload_data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewapproveuser.aspx.cs">
+      <DependentUpon>viewapproveuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewapproveuser.aspx.designer.cs">
+      <DependentUpon>viewapproveuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_change_user_water.aspx.cs">
+      <DependentUpon>view_change_user_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_change_user_water.aspx.designer.cs">
+      <DependentUpon>view_change_user_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_edit_water_user.aspx.cs">
+      <DependentUpon>view_edit_water_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_edit_water_user.aspx.designer.cs">
+      <DependentUpon>view_edit_water_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_menu.aspx.cs">
+      <DependentUpon>view_menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_menu.aspx.designer.cs">
+      <DependentUpon>view_menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_selectdata.aspx.cs">
+      <DependentUpon>view_selectdata.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_selectdata.aspx.designer.cs">
+      <DependentUpon>view_selectdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_user_water.aspx.cs">
+      <DependentUpon>view_user_water.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_user_water.aspx.designer.cs">
+      <DependentUpon>view_user_water.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="water_user.aspx.cs">
+      <DependentUpon>water_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="water_user.aspx.designer.cs">
+      <DependentUpon>water_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print.aspx.designer.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="print_request_instal.aspx.cs">
+      <DependentUpon>print_request_instal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="print_request_instal.aspx.designer.cs">
+      <DependentUpon>print_request_instal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl2.ascx.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl2.ascx.designer.cs">
+      <DependentUpon>WebUserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserControl3.ascx.cs">
+      <DependentUpon>WebUserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebUserControl3.ascx.designer.cs">
+      <DependentUpon>WebUserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\UploadTemp\" />
+    <Folder Include="App_Data\WorkDirectory\" />
+    <Folder Include="App_GlobalResources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print_request_instal.resx">
+      <DependentUpon>print_request_instal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_approve_requst.resx">
+      <DependentUpon>report_approve_requst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report_water_user.resx">
+      <DependentUpon>report_water_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource2.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://127.0.0.1/Servicewater/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://127.0.0.1/Servicewater/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DXWebTemplate_WebReference_WebService2</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8013</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8013/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

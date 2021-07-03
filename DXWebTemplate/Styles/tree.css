@@ -1,0 +1,259 @@
+﻿.dxtlControl_tree
+{
+	cursor: default;
+	font: 9pt Tahoma;
+	color: black;
+	border: none 1px #9f9f9f;
+}
+.dxtlControl_tree caption
+{
+	background: #ACACAC;
+	border: solid 1px #9F9F9F;
+	border-bottom: 0;
+	color: White;
+    font-size: 15px;
+	font-weight: normal;
+	padding: 3px 3px 5px;
+	text-align: center;				
+}
+
+/* Indent cells */
+.dxtlIndent_tree, .dxtlIndentWithButton_tree
+{			
+	background: white;
+	vertical-align: top;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.dxtlIndent_tree
+{
+	padding: 0 11px;
+}
+.dxtlIndentWithButton_tree
+{
+	padding: 5px 7px 6px;
+}
+.dxtlSelectionCell_tree
+{
+	vertical-align: top;
+	padding: 0 2px;
+	border: solid 1px #cfcfcf;
+}
+
+/* Tree-lines cells */
+.dxtlLineFirst_tree
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineFirst.gif")%>');	
+}
+.dxtlLineMiddle_tree
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineMiddle.gif")%>');
+	
+}
+.dxtlLineLast_tree
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineLast.gif")%>');
+	
+}
+.dxtlLineRoot_tree
+{
+	background-image: url('<%=WebResource("DevExpress.Web.ASPxTreeList.Images.Css.TreeLineRoot.gif")%>');
+	background-repeat: repeat-y;	
+}
+
+/* Headers */
+.dxtlHeader_tree 
+{
+	background: #dcdcdc;	
+	border: solid 1px #9f9f9f;
+	padding: 4px 6px 5px;
+	font-weight: normal;		
+}
+.dxtlHeader_tree table.dxtl 
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+.dxtlHeader_tree td.dxtl
+{
+	padding: 0;
+}
+.dxtlHeader_tree, .dxtlHeader_tree td.dxtl 
+{	
+	font: 9pt Tahoma;
+	white-space: nowrap;
+	text-align: left;
+}
+
+/* Nodes */
+.dxtlNode_tree
+{
+	background: white;
+}
+
+.dxtlNode_tree:hover
+{
+	background: gray;
+}
+
+.dxtlAltNode_tree
+{
+	background: #ededeb;	
+}
+.dxtlSelectedNode_tree
+{
+	background: #a0a0a0;
+	color: white;
+}
+.dxtlFocusedNode_tree
+{
+	background: #8d8d8d;
+    color: white;
+}
+.dxtlInlineEditNode_tree
+{
+	background: white;
+}
+.dxtlEditFormDisplayNode_tree 
+{
+	background: white;
+}
+
+.dxtlNode_tree td.dxtl, 
+.dxtlAltNode_tree  td.dxtl, 
+.dxtlSelectedNode_tree td.dxtl, 
+.dxtlFocusedNode_tree td.dxtl,
+.dxtlEditFormDisplayNode_tree td.dxtl,
+.dxtlCommandCell_tree
+{
+	padding: 3px 6px 4px;
+	border: solid 1px #cfcfcf;
+	white-space: nowrap;
+	font-size: 9pt;
+	font-family: Tahoma;
+}
+.dxtlInlineEditNode_tree td.dxtl
+{
+	border: solid 1px #cfcfcf;
+	padding: 1px;
+}
+
+/* Preview */
+.dxtlPreview_tree
+{
+	background: #f2f2f2;
+	color: #7f7f7f;
+	padding: 14px;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;	
+}
+
+/* Footers */
+.dxtlGroupFooter_tree
+{
+	background-color: #E0E0E0;	
+}
+.dxtlFooter_tree
+{
+	background-color: #D7D7D7;	
+}
+.dxtlGroupFooter_tree td.dxtl,
+.dxtlFooter_tree td.dxtl
+{
+	padding: 5px 6px 6px;
+	white-space: nowrap;
+	text-align: left;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;
+}
+
+/* Pagers */
+.dxtlPagerTopPanel_tree 
+{
+	border-bottom: none 1px #9f9f9f;
+	padding-bottom: 2px;
+}
+.dxtlPagerBottomPanel_tree 
+{	
+	border-top: none 1px #9f9f9f;
+	padding-bottom: 2px;
+}
+
+/* Editing */
+.dxtlEditForm_tree 
+{
+	background: #F0F0F0;
+	border: solid 1px #D3D3D3;
+	padding: 8px 10px 10px;
+}
+.dxtlEditFormCaption_tree,
+.dxtlEditFormEditCell_tree
+{
+	padding: 4px;
+}
+.dxtlEditFormCaption_tree
+{
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.dxtlError_tree
+{
+	background: #FFC8C8;
+	color: #FF0000;
+	padding: 6px 10px;
+	border: solid 1px #cfcfcf;
+	font: 9pt Tahoma;		
+}
+
+/* Links */
+.dxtlControl_tree a 
+{
+	color: #0d45b7;
+}
+.dxtlControl_tree a:hover 
+{
+	color:  #5494ea;
+}
+.dxtlSelectedNode_tree a, 
+.dxtlFocusedNode_tree a 
+{
+	color: White;
+}
+.dxtlSelectedNode_tree a:hover, 
+.dxtlFocusedNode_tree a:hover
+{
+	color: #f0f0f0;
+} 
+.dxtlCommandCell_tree a 
+{
+	margin-right: 3px;
+}
+
+/* Loading panel */
+.dxtlLoadingPanel_tree
+{
+	border: solid 1px #9F9F9F;
+	background-color: #E3E3E1;
+	font: 9pt Tahoma;
+	color: #303030;
+}
+.dxtlLoadingPanel_tree td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 12px;
+}
+.dxtlLoadingDiv_tree
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+/* Disabled */
+.dxtlDisabled_tree,
+.dxtlDisabled_tree .dxtl
+{
+	color: #808080;
+	cursor: default;
+}
